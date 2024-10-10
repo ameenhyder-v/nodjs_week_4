@@ -1,0 +1,39 @@
+<%- include('header') -%>
+<main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+
+    <div class="container">
+      <div class="card login-card">
+        <div class="row no-gutters">
+            
+            <div class="col-md-7">
+                <div class="card-body">
+                    <div class="brand-wrapper">
+                        <h1>Welcome to Express Dashboard</h1>
+                        <!-- <img src="assets/images/logo.svg" alt="logo" class="logo"> -->
+                    </div>
+                    <h3 class="login-card-description"><%=locals.user?user:"User"%></h3>
+                    <form action="/route/logout" method="post">
+                        <button type="submit"  class="btn btn-block login-btn mb-4" >Logout</button>
+                    </form>
+                    <!-- <input name="logout" id="logout" class="btn btn-block login-btn mb-4" type="submit" action="/route/logout" value="Logout"> -->
+                </div>
+            </div>
+            <div class="col-md-5">
+                <img src="/assets/girlReading.jpeg" alt="login" class="login-card-img">
+            </div>
+        </div>
+      </div>
+
+    </div>
+</main>
+<!-- <div class="text-center center-div mt-5" id="login">
+    <div class="container w-25 border py-5 mt-5">
+        <h3>Welcome to Express Dashboard</h3>
+        <h5><%=locals.user?user:"User"%></h5>
+        <a href="/route/logout">Logout</a>
+    </div>
+</div> -->
+
+<%- include('footer') -%>
+
+<!-- <a href="/route/logout " class="btn btn-block login-btn mb-4" method="POST">Logout</a> -->
